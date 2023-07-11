@@ -1,0 +1,49 @@
+General Tech Stack Notes:
+
+Datagrid to list out graphs
+LucidChart for data modeling
+Deploy backend to fly.io
+Deploy frontend to Vercel (free)
+
+FRONTEND:
+Material UI, Material UI datagrid for tables, Typescript, Vite, Recharts for chart library, Redux for state management, Redux Query for API calls, heroicons for icons, React Router for nav
+
+BACKEND:
+Node.js, Express.js framework, mongoose
+
+MACHINELEARNING:
+regression-js (simple library for machine learning)
+
+-------------------
+
+Project Details:
+CODE:
+npm create vite@latest
+run npm install to install dependencies with vite
+------
+npm i react-redux @reduxjs/toolkit react-router-dom @mui/material @emotion/react @emotion/styled @mui/icons-material @mui/x-data-grid
+npm i -D @types/react-dom (for typescript)
+To setup eslint config: npm i -D eslint eslint-config-react-app
+    in client folder: create .eslintrc.json
+npm i -D @types/node
+    Gives us the ability to say '@' instead of '../../../' when importing
+    Then go to vite config and import path from 'path'
+    After plugins, add alias for '@' and src
+
+NOTES:
+(use eslint extention)
+(redux dev tools for Mozilla, pesticide for Mozilla [shows layout of pages in CSS])
+The emotion library lets us style the material UI components 
+npm i -D -> means install these just for dependency purposes
+Google fonts: inter (400, 600, 700)
+Line 26-27 gives basic eslint configuration
+Typescript doesn't like .env so go to tsconfig.json, add "types": ["vite/client"]
+Add this to tsconfig.json: 
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+(Tailwind Shades extention: ctrl + k, ctrl + g: when selecting a color it well generate similar tones for theme.ts file)
+Can use useTheme from Material UI and can grab over 900 colors
+Create expanded.theme.ts 
+Box for MUI lets you pass in props easily
+MaterialUI is better for admin dashboards with more functionality whereas tailwind is better for unique customization
