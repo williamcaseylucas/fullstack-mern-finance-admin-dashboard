@@ -17,7 +17,7 @@ regression-js (simple library for machine learning)
 -------------------
 
 Project Details:
-CODE:
+CODE (client):
 npm create vite@latest
 run npm install to install dependencies with vite
 ------
@@ -47,3 +47,50 @@ Can use useTheme from Material UI and can grab over 900 colors
 Create expanded.theme.ts 
 Box for MUI lets you pass in props easily
 MaterialUI is better for admin dashboards with more functionality whereas tailwind is better for unique customization
+CSS-Tricks.com
+
+Could have <Box display="flex">, or could use custom styled component to just refernce <Component>
+https://mui.com/material-ui/material-icons/
+sx is for MUI, style is for standard things like React Router DOM
+
+Don't have to specify file name if the file in the folder is called index
+
+CSS Flex Cheat sheet: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+CSS Grid Cheat sheet: https://grid.malven.co/
+
+Grid template is most common
+Grid template areas is super useful for custom alignments of items 
+    Use template literals when defining this
+
+For media queries with React: useMediaQuery("(min-width: 1200px)");
+
+GridTemplateColumns is good for exact specs, GirdAutoColumns is good for general proportions
+
+Broke workflow into setup where we have three rows and we load the components relative to those rows. 
+
+By having a state folder that has createApi, you can reference various calls just by referencing the tag
+
+    Then when you export it adds use and adds Query to the end of your call
+
+REDUX:
+    Create state folder and create api.ts
+    Go to main.tsx and add files
+
+CODE (server):
+npm init -y
+npm i express body-parser cors dotenv helmet morgan mongoose mongoose-currency
+npm i -D nodemon
+npm i --save mongodb@latest
+
+NOTES:
+helmet for api security
+morgan for console log information
+Setup the same port 1337 as you did in the Vite react app
+Data Model can be used to model data flow in database
+Objects are defined by Map
+Can be problematic to define array in schema full of objects so it is better to map that to its own schema
+Need to add this to schema to have it work with the "get" method:
+    { toJSON: { getters: true } }
+
+Mongoose: ODM - Object Data Mapping
+Nosql: ORM - Object Relational Mapping
